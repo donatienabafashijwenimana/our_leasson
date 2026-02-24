@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    padding: 4px;
+    background-color: lightgray;
+    display: flex;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.nav {
+    width: 98%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 14px auto;
+    box-shadow: 5px 3px 5px gray;
+    position: relative;
+}
+
+.nav-sect-coll {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    label {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+    }
+}
+
+#show_hide {
+    display: none;
+}
+
+.nav1,
+.nav2 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+        padding: 0.3pc;
+
+        &:hover {
+            color: rgb(22, 22, 94);
+            box-shadow: 0 0 10px 0 gray;
+        }
+    }
+}
+
+.logout {
+    background-color: brown;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+
+    &:hover {
+        background-color: rgba(245, 42, 42, 0.7);
+    }
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    &:hover+#user-p-info {
+        display: block;
+    }
+}
+
+#user-p-info {
+    position: absolute;
+    margin-top: 70px;
+    background-color: rgb(197, 192, 192);
+    padding: 8px 12px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 14px;
+    display: none;
+}
+
+.main {
+    width: 98%;
+    min-height: 22.5pc;
+    box-shadow: 0px 0px 7px 0px gray;
+    margin: 3px auto;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.main-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1pc;
+
+    h1 {
+        font-size: 3.5pc;
+        color: blue;
+    }
+
+    p {
+        font-size: 1.3pc;
+        text-align: center;
+    }
+}
+
+.main-container {
+    h1 {
+        font-size: 40px;
+        text-align: left;
+        color: blue;
+        margin-bottom: 20px;
+    }
+}
+
+.services-container {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2pc;
+}
+
+.service-card {
+    padding: 15px;
+    box-shadow: 0 0 10px 0 gray;
+    position: relative;
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 6px 15px;
+        margin-top: 15px;
+        cursor: pointer;
+        background-color: rgb(36, 202, 3);
+        color: white;
+        border: none;
+
+        &:hover {
+            background-color: rgb(2, 82, 2);
+        }
+
+        &:focus+.message {
+            display: block;
+        }
+    }
+}
+
+.message {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    padding: 8px;
+    color: white;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.bottom-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    button {
+        font-size: 20px;
+        padding: 8px 20px;
+        cursor: pointer;
+        background-color: rgb(2, 2, 204);
+        border: none;
+        color: white;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: rgba(0, 0, 182, 0.7);
+        }
+    }
+}
+
+.footer {
+    background-color: rgb(219, 215, 215);
+    display: flex;
+    width: 98%;
+    margin: 10px auto;
+    padding: 15px;
+    gap: 3pc;
+    flex-wrap: wrap;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a,
+    p {
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        gap: 7px;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+}
+
+form {
+    background: #ffffff;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1e293b;
+    }
+
+    label {
+        margin: 10px 0 5px;
+        font-size: 14px;
+        color: #334155;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        border: 1px solid #cbd5e1;
+        border-radius: 5px;
+        outline: none;
+        font-size: 14px;
+
+        &:focus {
+            border-color: #38bdf8;
+        }
+    }
+
+    input[type="submit"] {
+        margin-top: 15px;
+        background: #0f172a;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: #1e293b;
+        }
+    }
+}
+
+/* Media Queries */
+
+@media (max-width: 1224px) {
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 960px) {
+    .nav {
+        height: auto;
+        width: 30%;
+        position: absolute;
+        right: 1pc;
+        z-index: 1;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .nav-sect-coll {
+        flex-direction: column;
+        align-items: flex-start;
+
+        label {
+            display: block;
+            margin-left: auto;
+        }
+    }
+
+    .nav1,
+    .nav2 {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        gap: 1pc;
+    }
+
+    #show_hide:checked~.nav1,
+    #show_hide:checked~.nav2 {
+        max-height: 400px;
+        padding: 15px 0;
+        display: flex;
+        background-color: rgb(189, 197, 197);
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer,
+    .bottom-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 650px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .main-container h1 {
+        font-size: 26px;
+    }
+
+    .nav1 a,
+    .nav2 a {
+        font-size: 16px;
+    }
+
+    .service-card p {
+        font-size: 16px;
+    }
+}

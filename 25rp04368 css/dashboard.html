@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* internal styles for dashboard layout */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+        header {
+            top: 0;
+        }
+        footer {
+            bottom: 0;
+        }
+        main {
+            position: absolute;
+            top: 60px;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+    <main>
+        <div class="card-container">
+            <div class="card"><h2>Card 1</h2><p>Details for card 1.</p></div>
+            <div class="card"><h2>Card 2</h2><p>Details for card 2.</p></div>
+            <div class="card"><h2>Card 3</h2><p>Details for card 3.</p></div>
+            <div class="card"><h2>Card 4</h2><p>Details for card 4.</p></div>
+            <div class="card"><h2>Card 5</h2><p>Details for card 5.</p></div>
+            <div class="card"><h2>Card 6</h2><p>Details for card 6.</p></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Your Company</p>
+    </footer>
+</body>
+</html>
